@@ -58,27 +58,12 @@ public class Qsmart2ApiApplication implements CommandLineRunner {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Qsmart2ApiApplication.class, args);
         String[] beans = ctx.getBeanDefinitionNames();
-        for (String s : beans) {
-            // System.out.println("Bean Name : " + s);
-        }
     }
 
-//    @Autowired
-//    @PersistenceContext(name = DBConstants.JPA_UNIT_NAME_QSMART)
-//    EntityManager entityManager;
 
     @Override
     public void run(String... args) throws Exception {
-        //   System.out.println("----------->"+entityManager.toString());
-      //  SampleProjectApplication.main(args);
-
     }
 
-    private String roomEngName;
-    private String roomArbName;
-
-    private String serviceEngName;
-
-    private String serviceArbName;
 
 }
