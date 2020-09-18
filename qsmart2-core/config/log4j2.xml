@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30">
+    <Properties>
+        <Property name="log-path">/logs/qsmart2-admin-api/</Property>
+    </Properties>
+
+   <Appenders>
+        <RollingFile name="RollingFile" fileName="${log-path}/hct" filePattern="${log-path}/hct-%d{dd-MM-yyyy-HH}.log">
+            <PatternLayout>
+                <pattern> %d{ISO8601} [%-5p][%25C{1}][%30M{1}][%4L] - %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+         
+        </RollingFile>
+        
+        <RollingFile name="querysFile" fileName="${log-path}/query" filePattern="${log-path}/query-%d{dd-MM-yyyy-HH}.log">
+            <PatternLayout>
+                <pattern>%d{ISO8601} [%-10.10t][%-5p] %C{1}(%4L) - %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+         
+        </RollingFile>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout>
+                <!--<pattern>%d{ISO8601} [%-10.10t][%-5p] %C{1}(%4L) - %m%n</pattern>-->
+                <pattern> %d{ISO8601} [%-5p][%25C{1}][%30M{1}][%4L] - %m%n</pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    
+    
+    
+    <Loggers>
+        <!--        <logger name="org.hibernate.SQL" additivity="true" />
+        <logger name="org.hibernate.type" additivity="true" />-->
+        <Logger name="org.hibernate.SQL" level="debug" additivity="false">
+            <AppenderRef ref="querysFile" />
+        </Logger>
+
+        <!-- Log JDBC bind parameters -->
+        <Logger name="org.hibernate.type.descriptor.sql" level="trace" additivity="false">
+            <AppenderRef ref="querysFile" />
+        </Logger>
+        <Logger name="org.hibernate.type.descriptor.sql" level="trace"/>
+        <Root level="INFO">
+            <AppenderRef ref="CONSOLE" level="INFO"/>
+            <AppenderRef ref="RollingFile" level="INFO"/>
+        </Root>
+    </Loggers>
+</Configuration>

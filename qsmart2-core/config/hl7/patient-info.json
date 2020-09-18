@@ -1,0 +1,119 @@
+{
+    "tableName": "tbl_patient",
+    "fields": [
+        {
+            "columnName": "mrn_no",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "PID.3.1",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "national_id",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "PID.19",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "first_name",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "PID.5.1.1",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "middle_name",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "PID.5.3",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "last_name",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "PID.5.2",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "dob",
+            "dataType": "DATE",
+            "isHl7Segment": true,
+            "defaultValue": "yyyyMMdd",
+            "expectedFormat": "yyyy-MM-dd",
+            "segmentId": "PID.7.1",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "gender",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "PID.8",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "created_on",
+            "dataType": "DATE",
+            "isHl7Segment": false,
+            "defaultValue": "GETDATE()",
+            "expectedFormat": "yyyy-MM-dd HH:mm:ss",
+            "segmentId": "",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "updated_on",
+            "dataType": "DATE",
+            "isHl7Segment": false,
+            "defaultValue": "GETDATE()",
+            "expectedFormat": "yyyy-MM-dd HH:mm:ss",
+            "segmentId": "",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "priority",
+            "dataType": "Short",
+            "isHl7Segment": false,
+            "defaultValue": "0",
+            "expectedFormat": "",
+            "segmentId": "",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        }
+    ]
+}

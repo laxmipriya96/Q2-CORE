@@ -1,0 +1,207 @@
+{
+    "tableName": "tbl_hl7_cdr",
+    "fields": [
+        {
+            "columnName": "msg_type",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'MSH.9.2')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "mrn_no",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'PID.3.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "national_id",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'PID.19')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "dob",
+            "dataType": "DATE",
+            "isHl7Segment": true,
+            "defaultValue": "yyyyMMdd",
+            "expectedFormat": "yyyy-MM-dd",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'PID.7.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "gender",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'PID.8')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "mobile_no",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'PID.13.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "appt_start_time",
+            "dataType": "DATE",
+            "isHl7Segment": true,
+            "defaultValue": "yyyyMMddHHmmss",
+            "expectedFormat": "yyyy-MM-dd HH:mm:ss",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'SCH.11.4.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "service_location",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'AIL.3.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "appt_type",
+            "dataType": "STRING",
+            "isHl7Segment": false,
+            "defaultValue": "appt_type",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'PID.13.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "appt_code",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "appt_code",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'SCH.7.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "appt_end_time",
+            "dataType": "DATE",
+            "isHl7Segment": true,
+            "defaultValue": "yyyyMMddHHmmss",
+            "expectedFormat": "yyyy-MM-dd HH:mm:ss",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'SCH.11.5.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "resource_code",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'AIP.2')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "dr_first_name",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'AIP.3.3')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "dr_middle_name",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'AIP.3.4')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "dr_last_name",
+            "dataType": "STRING",
+            "isHl7Segment": true,
+            "defaultValue": "",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'AIP.3.2')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "remarks",
+            "dataType": "STRING",
+            "isHl7Segment": false,
+            "defaultValue": "",
+            "segmentId": "",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "created_on",
+            "dataType": "DATE",
+            "isHl7Segment": false,
+            "defaultValue": "GETDATE()",
+            "segmentId": "",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        },
+        {
+            "columnName": "received_date",
+            "dataType": "DATE",
+            "isHl7Segment": true,
+            "defaultValue": "yyyyMMddHHmmss",
+            "expectedFormat": "yyyy-MM-dd HH:mm:ss",
+            "segmentId": "$.segments[*]..fields[?(@.name == 'MSH.7.1')]",
+            "isRepeatable": false,
+            "isConditional": false,
+            "conditionalSegmentId": "",
+            "conditionalSegmentValue": ""
+        }
+    ]
+}

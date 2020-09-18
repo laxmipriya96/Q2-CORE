@@ -1,0 +1,87 @@
+<html>
+          <meta charset="UTF-8">
+          <style type="text/css">
+		     table#mytable{
+				border:1px solid black;
+			 }
+			 @media print{
+				table#mytable{
+				border:1px solid black;
+			 }
+			 }
+		  </style>
+          
+          <body>
+            <table  style="width:78mm; padding:3.5mm;" align="center">
+		       <tr style="font-family:Arial;font-size:11px;">
+                <td>
+                  <table id="mytable" style="width:100%;border:1px solid black;">
+                    <tr>
+                      <td style="text-align:left;width:55%;word-break: break-all;">{BRANCH_EN}</td>
+                      <td style="text-align:right;width:45%;">{BRANCH_AR}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr style="margin-top:2px">
+                <td>
+                  <table style="width:100%;font-family:Arial;font-size:11.5px;" cellpadding="2">
+                    <tr style="text-align:left;">
+                      <td style="width:110px;word-break:break-word;vertical-align:bottom;">Time of Appointment</td>
+                      <td style="text-align:left;vertical-align:bottom;font-weight:bold;">{APPOINTMENT_TIME}</td>
+                      <td style="text-align:right;vertical-align:bottom;">وقت التعيين</td>
+                    </tr>
+                    <tr style="text-align:left;">
+                      <td style="width:110px;word-break:break-word;vertical-align:bottom;">Time Now</td>
+                      <td style="text-align:left;vertical-align:bottom;font-weight:bold;">{TIME_NOW}</td>
+                      <td style="text-align:right;vertical-align:bottom;">الوقت الآن</td>
+                    </tr>
+                    <tr style="text-align:left;">
+                      <td style="width:110px;word-break:break-word;vertical-align:bottom;">Date</td>
+                      <td style="text-align:left;vertical-align:bottom;font-weight:bold;">{DATE}</td>
+                      <td style="text-align:right;vertical-align:bottom;">تاريخ</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table style="width:100%;font-family:Arial;font-size:11.5px;">
+                    <tr>
+                      <td style="text-align:left;">Your Token Number</td>
+                      <td style="text-align:right;">رقم الرمز الخاص بك</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h1 style="text-align:center;font-family:Segoe UI Black;margin:0;font-size:40px;">{TOKEN_NO}</h1>
+                </td>
+              </tr>
+            </table>
+          </body>
+          
+          </html>
+		  
+		  	  {barcode}
+			
+         <html>
+          <meta charset="UTF-8">
+          <style type="text/css"></style>
+          
+          <body>
+            <table style="width:78mm; padding:3.5mm;font-family:Arial;font-size:11.5px;" align="center">
+              <tr>
+                <td>
+				<span style="text-align:center; line-height:20px;display:block;">يرجى الاحتفاظ بهذه البطاقة حتى تغادر المستشفى</span>
+				<span style="text-align:center; line-height:20px;display:block;">Please keep this card until you leave the hospital</span>
+				<span style="text-align:center; line-height:20px;display:block;">سيظهر رقمك المميز على شاشات التلفزيون عندما يحين دورك</span>
+				<span style="text-align:center; line-height:20px;display:block;">Your token number will appear on TV screens when your turn comes</span><br/>
+
+			</td>
+              </tr>
+            </table>
+          </body>
+          
+          </html>
