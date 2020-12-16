@@ -6,6 +6,9 @@
 package com.vm.qsmart2api.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.util.concurrent.ListeningExecutorService;
+import com.google.common.util.concurrent.MoreExecutors;
+import java.util.concurrent.Executors;
 import org.eclipse.jetty.http.HttpVersion;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.HttpConfiguration;
@@ -97,6 +100,13 @@ public class WebServerConfig {
         return new RestTemplate();
     }
     
+    @Bean
+    public ListeningExecutorService taskExecutor() {
+//        ExecutorService executor = Executors.newFixedThreadPool(100);
+        ListeningExecutorService service = MoreExecutors.listeningDecorator(Executors.newCachedThreadPool());
+//        ThreadPoolTaskExecutor pool = new ThreadPoolTaskExecutor();
+        return service;
+    }
     
     
 }
